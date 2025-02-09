@@ -43,7 +43,9 @@ test("Header of the GitHub action research tools page", async () => {
   );
   const expected = "Enhance your workflow with extensions"; 
   expect(actual).toContain(expected);
-});
+}, 20000);
+
+
 
 test("Page title about how GitHub helps secure applications", async () => {
   await page.goto("https://github.com/features/security");
@@ -52,7 +54,7 @@ test("Page title about how GitHub helps secure applications", async () => {
     (link) => link.textContent);
   const expected = "Security at every step";
   expect(actual).toContain(expected);
-});
+}, 20000);
 
 test("Header of the page with company stories", async () => {
   await page.goto("https://github.com/customer-stories?type=team");
@@ -61,4 +63,4 @@ test("Header of the page with company stories", async () => {
   );
   const expected = "Meet the companies who build with GitHub";
   expect(actual).toContain(expected);
-});
+}, 20000);
